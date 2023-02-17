@@ -1,0 +1,17 @@
+# Default ignored files
+/.idea/shelf/
+/.idea/workspace.xml
+*.iml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# Classes and other stuff generated automatically
+target
+
+# Recommended to exclude by intellij-support
+/.idea/dictionaries
+/.idea/modules.xml
+/.idea/libraries
