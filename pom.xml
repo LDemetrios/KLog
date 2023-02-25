@@ -6,7 +6,7 @@
 
     <artifactId>KLog</artifactId>
     <groupId>org.ldemetrios</groupId>
-    <version>0.2-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>consoleApp</name>

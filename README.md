@@ -1,6 +1,7 @@
 # Current state
 
-Doesn't even work. Is being developed, probably, right now.
+Library is now ready to use, but yet quite useless. 
+Plans: add basic logger and few log formats, and thread events monitoring 
 
 # What is KLog about?
 
@@ -119,6 +120,11 @@ Besides, this logger, as mentioned above, is not suitable for large methods,
 and especially not intended for logging something in release-time.
 
 # Change log
+
+## 1.0
+
+- Add Logger interface
+- Add logger differentiation by threads (LoggerTable)
 
 ## 0 Developing
 
