@@ -1,6 +1,6 @@
 # Current state
 
-Doesn't even work. Is being developed, probably, right now. 
+Doesn't even work. Is being developed, probably, right now.
 
 # What is KLog about?
 
@@ -8,10 +8,10 @@ Doesn't even work. Is being developed, probably, right now.
 
 ### Create easy-to-use logging lib.
 
-Hey, there already are a bunch of logging libraries. 
+Hey, there already are a bunch of logging libraries.
 Why create another one?
 
-Well, if you know any, that does exactly what I what this to do, 
+Well, if you know any, that does exactly what I what this to do,
 you can ping me anywhere you want.
 
 Consider the example:
@@ -48,15 +48,16 @@ Exception in thread "main" java.lang.AssertionError
     etc
 ```
 
-Isn't it obvious that `bzz` is called from `foo(Test.kt:13)` 
-and `bar` from `foo(Test.kt:13)`? 
-And they both do call `foo` again? 
+Isn't it obvious that `bzz` is called from `foo(Test.kt:13)`
+and `bar` from `foo(Test.kt:13)`?
+And they both do call `foo` again?
 I completely understand why java or kotlin don't show
 parameters of functions in the stack trace, but sometimes I need them.
-Without step-by-step-stepping in debug mode, 
+Without step-by-step-stepping in debug mode,
 I want to see tree of calls, with parameters stored.
 Of course, it's applicable only for small methods.
 But I prefer getting something like this:
+
 ```
 TestKt.main()
     l4 -> TestKt.foo(566)
@@ -67,11 +68,12 @@ TestKt.main()
 ```
 
 Besides, that's not the best sample, because its 'tree' is 'bamboo',
-but consider ExceptionParser sample (TODO).
+but consider [ExceptionParser sample](src/samples/kotlin/expression/withLogging/ExpressionParser.kt).
 
 ### Keep its syntax from messing with meaningful code
 
 Compare this:
+
 ```
 fun foo(x: Int): Int {
     println(/* indent + */ "TestKt.foo($x)")
@@ -89,7 +91,9 @@ fun foo(x: Int): Int {
     return res
 }
 ```
+
 to this:
+
 ```
 fun foo(x: Int): Int = Logger.logCall(x) {
     when {
@@ -100,6 +104,7 @@ fun foo(x: Int): Int = Logger.logCall(x) {
     } + 1
 }
 ```
+
 The first is not what I want to come up with, but the second is.
 
 ### (In prospect) Create simple and intuitive gui to navigate through that information
@@ -108,14 +113,19 @@ The first is not what I want to come up with, but the second is.
 
 ### Create Super-Ultra-Mega-Log-Engine
 
-Some body movements from user are still required. 
+Some body movements from user are still required.
 I am not reflection-wizard able to look through code evaluation at its runtime.
-Besides, this logger, as mentioned above, is not suitable for large methods, 
+Besides, this logger, as mentioned above, is not suitable for large methods,
 and especially not intended for logging something in release-time.
 
 # Change log
 
 ## 0 Developing
+
+### 0.2
+
+- Add more clear sample (ExpressionParser)
+- Add desired function contracts (More will be added later)
 
 ### 0.1
 
