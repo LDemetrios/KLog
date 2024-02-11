@@ -28,7 +28,7 @@ dependencies {
 }
 
 group = "org.ldemetrios"
-version = "1.0-SNAPSHOT"
+version = "0.4"
 description = "Simple logging library"
 //java.sourceCompatibility = JavaVersion.VERSION_1_8
 

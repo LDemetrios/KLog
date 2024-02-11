@@ -121,12 +121,18 @@ and especially not intended for logging something in release-time.
 
 # Change log
 
-## 1.0
+## 0 Developing
+
+### 0.4
+
+- Migrate to gradle
+- Major refactoring
+- Introduce typst for formatting
+
+### 0.3
 
 - Add Logger interface
 - Add logger differentiation by threads (LoggerTable)
-
-## 0 Developing
 
 ### 0.2
 
